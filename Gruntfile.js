@@ -17,18 +17,12 @@ module.exports = function(grunt) {
             }
         },
         copy : {
-            views : {
-                files : [
-                    {
-                        src  : [
-                            'app.js',
-                            'style.css'
-                        ],
-                        dest : 'build/'
-                    }
+            views: {
+                files: [
+                    {src: 'build/*.js', dest: '../app.min.js'},
+                    {src: 'build/*.css', dest: '../style.css'}
                 ]
             }
-
         },
         cssmin: {
             minify: {
@@ -62,6 +56,4 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', ['clean', 'uglify', 'cssmin','rev','jshint']);
-
-
 };
