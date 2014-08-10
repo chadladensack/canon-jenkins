@@ -68,6 +68,10 @@ body {
     background-color: transparent !important;
 }
 
+#main-panel-content div.healthReportDetails {
+    background-color: #fff !important;
+}
+
 #side-panel .task-link {
     color: #333;
 }
